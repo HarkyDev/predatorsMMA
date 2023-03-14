@@ -23,7 +23,6 @@ defineProps({
 
 <style scoped>
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;900&display=swap');
 
 
 *{
@@ -33,7 +32,8 @@ defineProps({
 
 .hero-bg{
   background-image: url("public/assets/bg.png");
-  min-width: 100vw;
+  background-repeat: repeat-y;
+  min-width: 99vw;
   min-height: 96vh;
   display:flex;
   flex-direction: column;
@@ -102,7 +102,7 @@ h3 {
 
 button{
   border:none;
-  padding: 1rem;
+  padding: 1rem 2rem;
   border-radius: 1rem;
   font-weight: 900;
   font-family: 'Passion One', sans-serif;
@@ -113,9 +113,10 @@ button{
 }
 
 button:hover{
-  box-shadow: 0px 0px 140px yellow;
-  transition: 1s;
+  box-shadow: 0px 0px 120px yellow;
+  transition: 500ms;
   cursor:pointer;
+  transform: scale(1.1)
 }
 
 @media (min-width: 1024px) {
