@@ -1,14 +1,42 @@
+<script>
+export default{
+    data(){
+        return{
+            items:[
+                {
+                    img: "../public/assets/sport1.png",
+                    text:"MIXED MARTIAL ARTS",
+                }, 
+                {
+                    img: "../public/assets/sport2.png",
+                    text:"KICKBOXING",
+                }, 
+                {
+                    img: "../public/assets/sport3.png",
+                    text:"BRAZILIAN JIU-JITSU",
+                }, 
+                {
+                    img: "../public/assets/sport4.png",
+                    text:"KIDS CLASSES",
+                }, 
+           
+            ]
+        }
+    }
+}
+</script>
+
 <template>
 <div className="imgContainer">
- <img src="public\assets\sport1.png" /> 
- <p>MIXED MARTIAL ARTS</p>
- <img src="public\assets\sport2.png" /> 
- <p>KICKBOXING</p>
- <img src="public\assets\sport3.png" />
- <p>BRAZILIAN JIU-JITSU</p> 
- <img src="public\assets\sport4.png" /> 
- <p>KIDS CLASSES</p>
-</div>
+
+
+                        <div className="offeredItems" v-for="(item, index) of items"  :key=items.img  >
+                            <img v-bind:src="item.img">
+                            <p> {{ item.text }}</p>
+                        </div>
+                    </div>
+                  
+
 </template>
 
 <style scoped>
@@ -35,5 +63,29 @@ img:hover{
  transform: translate(0px,-10px);
  transition: 500ms;
  cursor:pointer
+}
+
+
+.offeredItems {
+  display:flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    color:white;
+    flex-direction: row;
+}
+.offeredItems > img {
+position: relative;
+}
+
+.offeredItems > p{
+    position: absolute;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: 'Passion One', sans-serif;
+  font-style:italic;
+  margin: 0px;
+  transform: scale(1, .8);
 }
 </style>
