@@ -24,6 +24,5 @@ export default{
 .wrapper {
   display: flex;
   flex-direction: column;
-  outline: solid green 1px;
 }
 </style>

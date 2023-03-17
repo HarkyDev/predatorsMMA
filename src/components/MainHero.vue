@@ -33,12 +33,17 @@ defineProps({
 .hero-bg{
   background-image: url("public/assets/bg.png");
   background-repeat: repeat-y;
-  min-width: 99vw;
+  width: 99vw;
   min-height: 96vh;
   display:flex;
   flex-direction: column;
   align-items:center;
   justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top:0px;
+  left:0px;
 }
 
 h1 {
