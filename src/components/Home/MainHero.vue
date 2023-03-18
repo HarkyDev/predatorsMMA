@@ -1,24 +1,13 @@
 
 <script setup>
-
 import { Icon } from '@iconify/vue'
-
-
 defineProps({
   msg: {
     type: String,
     required: true
   }
 })
-
 </script>
-
-
-
-
-
-
-
 <template className="templateHero">
   <div className="hero-bg">
         <div class="greetings">

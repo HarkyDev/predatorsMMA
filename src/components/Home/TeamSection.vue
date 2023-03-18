@@ -25,12 +25,11 @@ img{
      width: 30vw;
 }
 .aboutContainer {
-    display: flex;
-    max-width: 90vw;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
+    display:flex;
+     align-items: center;
     justify-content: center;
+    width:100%;
+
 
 }
 

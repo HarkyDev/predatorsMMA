@@ -28,11 +28,11 @@ img{
 
 .aboutContainer{
     display:flex;
-    max-width: 90vw;
-    margin-left: auto;
-    margin-right: auto;
      align-items: center;
     justify-content: center;
+    background-color: rgb(1,1,1,0.15);
+    width:100%;
+
 }
 
 .aboutContainer > *{
