@@ -22,12 +22,17 @@
 
 <style scoped>
 
+img{
+ width: 30vw;
+}
+
 .aboutContainer{
     display:flex;
     max-width: 90vw;
     margin-left: auto;
     margin-right: auto;
-    
+     align-items: center;
+    justify-content: center;
 }
 
 .aboutContainer > *{

@@ -10,8 +10,10 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@coreui/vue": "^4.7.0",
+    "@iconify/vue": "^4.1.0",
+    "iconify": "^1.4.0",
     "nodemon": "^2.0.21",
+    "oh-vue-icons": "^1.0.0-rc3",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },

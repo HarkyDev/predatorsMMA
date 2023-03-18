@@ -7,25 +7,25 @@ export default{
                     img: "assets/sport1.png",
                     text:"MIXED MARTIAL ARTS",
                     index: 1,
-                    route: "MIXED-MARTIAL-ARTS"
+                    route: "#/MIXED-MARTIAL-ARTS"
                 }, 
                 {
                     img: "assets/sport2.png",
                     text:"KICKBOXING",
                     index: 2,
-                    route: "KICKBOXING"
+                    route: "#/KICKBOXING"
                 }, 
                 {
                     img: "assets/sport3.png",
                     text:"BRAZILIAN JIU-JITSU",
                     index: 3,
-                    route: "BRAZILIAN-JIU-JITSU"
+                    route: "#/BRAZILIAN-JIU-JITSU"
                 }, 
                 {
                     img: "assets/sport4.png",
                     text:"KIDS CLASSES",
                     index: 4,
-                    route: "KIDS-CLASSES"
+                    route: "#/KIDS-CLASSES"
                 }, 
            
             ]
@@ -39,12 +39,14 @@ export default{
 
 
                         <div className="offeredItems" v-for="(item, index) of items"  v-bind:key=index  >
-
-                                <p> {{ item.text }}</p>
-                                <div className="gradientOverlay"></div>
-                                <img v-bind:src="item.img">
+                                <a v-bind:href="item.route">
+                                    <p class="itemTitle"> {{ item.text }}</p>
+                                    <div className="gradientOverlay"></div>
+                                    <img v-bind:src="item.img">
+                                </a>
                         </div>
                     </div>
+                     <font-awesome-icon icon="fa-solid fa-user-secret" />
                   
 
 </template>
@@ -101,7 +103,7 @@ img{
 position: relative;
 }
 
-.offeredItems > p{
+.itemTitle{
     text-align: center;
     position: absolute;
     color: white;
@@ -111,6 +113,12 @@ position: relative;
   font-style:italic;
   margin: 0px;
   transform: scale(1, .8);
+}
+
+a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 </style>

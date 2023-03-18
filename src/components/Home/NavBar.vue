@@ -12,7 +12,7 @@
                   <p className="navBarButtons">CONTACT</p>
                   <p className="navBarButtons">REVIEWS</p>
                   <div className="callUsDiv">
-                        <p>CALL US</p>
+                        <p id="callUsText">CALL US FOR ENQUIRIES</p>
                         <p>07897313488</p>
 
                   </div>
@@ -25,23 +25,26 @@
 
 <style scoped>
 
+#callUsText{
+      color: yellow;
+}
 .navBarButtons:hover{
       transition: 0.5s;
-      color: white;
+      color: yellow;
       cursor: pointer;
 }
 .callUsDiv{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
       text-align: right;
-display: flex;
-flex-direction: column;
-justify-content: right;
 }
 p{
        font-weight: 500;
   text-align: center;
   font-size: 1rem;
   font-weight: 700;
-  color: yellow;
+  color: white;
   font-family: 'Passion One', sans-serif;
   font-style:italic;
   margin-right: 30px;

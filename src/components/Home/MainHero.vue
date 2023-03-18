@@ -1,11 +1,22 @@
+
 <script setup>
+
+import { Icon } from '@iconify/vue'
+
+
 defineProps({
   msg: {
     type: String,
     required: true
   }
 })
+
 </script>
+
+
+
+
+
 
 
 <template className="templateHero">
@@ -16,19 +27,54 @@ defineProps({
       </h1>
       <h2>MIXED MARTIAL ARTS<span className="span-h2"> & BRAZILIAN JIU-JITSU</span></h2>
       </div>
-      <button>BOOK A FREE CLASS</button>
+          <button>BOOK A FREE CLASS</button>
+          <div className="socialsContainer">
+            <a className="socialLink">
+              <Icon className="socialIcon" icon="mdi:instagram"/>
+            </a>
+            <a className="socialLink">
+              <Icon className="socialIcon" icon="mdi:youtube"/>
+            </a>
+            <a className="socialLink">
+              <Icon className="socialIcon" icon="mdi:twitter"/>
+            </a>
+            <a className="socialLink">
+              <Icon className="socialIcon" icon="mdi:facebook"/>
+            </a>
+          
+        </div>
   </div>
 </template>
 
 
 <style scoped>
 
-
-
-*{
-  text-align: center;
-  font-family:
+.socialsContainer{
+  display: flex;
+  margin-top: 10rem;
+  min-width: 10%;
+  justify-content: space-around;
+  color: yellow;
+  font-size: 1.3rem;
 }
+
+.socialLink {
+  color: yellow;
+  cursor: pointer;
+}
+.socialLink:hover {
+  transition: 500ms;
+  color: white;
+  cursor: pointer;
+  background: none;
+  font-size: 1.5rem;
+}
+
+.socialLink:hover + .socialIcon{
+  transition: 500ms;
+}
+
+
 
 .hero-bg{
   background-image: url("public/assets/bg.png");
