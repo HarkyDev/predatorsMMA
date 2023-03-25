@@ -42,18 +42,7 @@ export default {
           text: "I've trained at a lot of gyms over the years, but Predators is by far the best.The trainers are passionate about what they do, and it shows in every session.",
           stars: 4,
         },
-        {
-          img: 'assets/review6.png',
-          name: 'Natasha Romanoff',
-          text: "If you're serious about MMA or just want to get in shape, Predators is the place to be.The atmosphere is electric, and the trainers will push you to be your best",
-          stars: 5,
-        },
-        {
-          img: 'assets/review8.png',
-          name: 'Dianna Prince',
-          text: "I can't recommend Predators enough! The training is intense, but the results are worth it. Plus, the community is amazing and supportive, making it a great place to train and make friends.",
-          stars: 5,
-        },
+    
       ]
     }
   }
@@ -69,11 +58,11 @@ export default {
                 <img v-bind:src="item.img"/>
                 <p className="userName">{{ item.name }}</p>
                 <div className="starsContainer">
-                  <p v-bind:v-for="n in item.stars"> 
+                  <p v-for="n in item.stars"> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 18.275l-4.15 2.5q-.275.175-.575.15q-.3-.025-.525-.2q-.225-.175-.35-.437q-.125-.263-.05-.588l1.1-4.725L3.775 11.8q-.25-.225-.312-.513Q3.4 11 3.5 10.725q.1-.275.3-.45q.2-.175.55-.225l4.85-.425l1.875-4.45q.125-.3.388-.45q.262-.15.537-.15t.538.15q.262.15.387.45l1.875 4.45l4.85.425q.35.05.55.225q.2.175.3.45q.1.275.038.562q-.063.288-.313.513l-3.675 3.175l1.1 4.725q.075.325-.05.588q-.125.262-.35.437q-.225.175-.525.2q-.3.025-.575-.15Z"/></svg>
                   </p>
                 </div>
-                <p className="userText">"{{ item.text }}""</p>
+                <p className="userText">"{{ item.text }}"</p>
               </div>
               
               
@@ -83,21 +72,49 @@ export default {
 </template>
 
 <style scoped>
+.reviewContainer {
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  row-gap: 1rem;
+}
+
+.reviewContainer > *{
+  flex: 0 0 30%;
+}
+
+.cardContainer{
+    display: flex;
+    flex: 3;
+    height: 100%;
+    margin: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    padding: 20px 50px;
+    background-color: rgb(1,1,1,0.1);
+    border-radius: 20px;
+}
 .reviewSection{
   padding: 50px;
 }
+  .reviewItems:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+  }
 .userText{
   text-align: center;
   color: white;
-   font-size: 1rem;
+  font-size: 1rem;
   font-weight: 700;
   font-family: 'Passion One', sans-serif;
   font-style:italic;
   margin: 0px;
 }
 .userName{
-   color: white;
- font-size: 1rem;
+  color: white;
+  font-size: 1rem;
   font-weight: 900;
   font-family: 'Passion One', sans-serif;
   font-style:italic;
@@ -108,8 +125,7 @@ svg{
   color: yellow;
 }
 .reviewItems{
-  flex: 0 0 auto; 
-  width: 300px;
+  flex-grow: 1;
 }
 .reviewSection{
   display: flex;
@@ -120,30 +136,8 @@ svg{
     display: flex;
 
 }
-.cardContainer{
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: top;
-    padding: 20px 50px;
-    background-color: rgb(1,1,1,0.1);
-    border-radius: 20px;
-    margin:20px;
-    flex: 0 0 auto; 
-  }
   
   
-  .reviewContainer {
-    
-    width: 60vw;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    -webkit-scrollbar { display: none; }
-}
 
 img{
   width: 128px;
