@@ -6,6 +6,7 @@ import NavBar from "../components/home/NavBar.vue"
 import TeamSection from "../components/Home/TeamSection.vue"
 import ReviewsSection from "../components/Home/ReviewsSection.vue"
 import StaffSection from "../components/Home/StaffSection.vue"
+import LocationSection from "../components/Home/LocationSection.vue"
 </script>
 
 <template>
@@ -17,5 +18,6 @@ import StaffSection from "../components/Home/StaffSection.vue"
     <OfferedSection />
     <ReviewsSection />
     <StaffSection />
+    <LocationSection />
   </main>
 </template>
